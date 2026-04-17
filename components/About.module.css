@@ -69,10 +69,12 @@
   cursor: default;
 }
 .serviceRow:first-child { border-top: 1px solid var(--border-lt); }
-.serviceRow:hover {
-  background: var(--surface);
-  margin: 0 -48px;
-  padding: 28px 48px;
+@media (hover: hover) {
+  .serviceRow:hover {
+    background: var(--surface);
+    margin: 0 -48px;
+    padding: 28px 48px;
+  }
 }
 
 .serviceNum {
@@ -102,7 +104,9 @@
   padding-top: 2px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.serviceRow:hover .serviceArrow { color: var(--olive); transform: translate(4px, -4px); }
+@media (hover: hover) {
+  .serviceRow:hover .serviceArrow { color: var(--olive); transform: translate(4px, -4px); }
+}
 
 @media (max-width: 1024px) {
   .grid { grid-template-columns: 1fr; }

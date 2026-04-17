@@ -53,7 +53,7 @@
 .tabBtn > span { opacity: 0; transition: opacity 0.3s ease; }
 .tabActive { color: var(--olive); }
 .tabActive > span { opacity: 1; }
-.tabBtn:hover { color: var(--ink); }
+@media (hover: hover) { .tabBtn:hover { color: var(--ink); } }
 
 /* Main panel */
 .main { padding: 72px 0 72px 48px; }

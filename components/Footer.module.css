@@ -38,7 +38,7 @@
   transition: color 0.3s ease;
   cursor: default;
 }
-.link:hover { color: var(--lime); }
+@media (hover: hover) { .link:hover { color: var(--lime); } }
 
 .backTop {
   display: inline-flex;
@@ -54,7 +54,7 @@
   transition: border-color 0.3s ease, color 0.3s ease;
   cursor: default;
 }
-.backTop:hover { border-color: var(--lime); color: var(--lime); }
+@media (hover: hover) { .backTop:hover { border-color: var(--lime); color: var(--lime); } }
 
 @media (max-width: 768px) {
   .inner { flex-wrap: wrap; gap: 12px; height: auto; padding: 16px 0; }

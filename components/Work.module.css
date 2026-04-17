@@ -67,7 +67,7 @@
   object-position: center;
   transition: transform 0.5s ease;
 }
-.card:hover .thumbImg { transform: scale(1.04); }
+@media (hover: hover) { .card:hover .thumbImg { transform: scale(1.04); } }
 
 /* Overlay — solo en dispositivos con ratón */
 .overlay {
@@ -159,7 +159,7 @@
   padding: 4px 10px;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
-.card:hover .chip { border-color: var(--olive); color: var(--olive); }
+@media (hover: hover) { .card:hover .chip { border-color: var(--olive); color: var(--olive); } }
 
 @media (max-width: 1024px) {
   .workHeader { grid-template-columns: 1fr; }
