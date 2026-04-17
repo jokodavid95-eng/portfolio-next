@@ -67,7 +67,7 @@
   object-position: center;
   transition: transform 0.5s ease;
 }
-@media (hover: hover) { .card:hover .thumbImg { transform: scale(1.04); } }
+:global(body.has-mouse) .card:hover .thumbImg { transform: scale(1.04); }
 
 /* Overlay — solo en dispositivos con ratón */
 .overlay {
@@ -83,10 +83,8 @@
 }
 
 /* Solo activa hover en dispositivos que lo soportan */
-@media (hover: hover) {
-  .card:hover .overlay,
-  .card:focus-within .overlay { opacity: 1; }
-}
+:global(body.has-mouse) .card:hover .overlay,
+.card:focus-within .overlay { opacity: 1; }
 
 .overlayLink {
   font-size: 11px;
@@ -159,7 +157,7 @@
   padding: 4px 10px;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
-@media (hover: hover) { .card:hover .chip { border-color: var(--olive); color: var(--olive); } }
+:global(body.has-mouse) .card:hover .chip { border-color: var(--olive); color: var(--olive); }
 
 @media (max-width: 1024px) {
   .workHeader { grid-template-columns: 1fr; }
