@@ -35,8 +35,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Native cursor */
-a, button, [role="button"], summary, label { cursor: pointer; }
+/* Native cursor — always arrow */
+* { cursor: default !important; }
 
 /* =============================================
    SCROLLBAR (cross-browser)

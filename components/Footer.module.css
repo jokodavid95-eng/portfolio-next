@@ -18,7 +18,7 @@
   text-transform: uppercase;
   color: var(--cream);
   text-decoration: none;
-  cursor: pointer;
+  cursor: default;
 }
 
 .copy { font-size: 11px; letter-spacing: 0.1em; }
@@ -36,7 +36,7 @@
   color: rgba(250,250,242,0.35);
   text-decoration: none;
   transition: color 0.3s ease;
-  cursor: pointer;
+  cursor: default;
 }
 .link:hover { color: var(--lime); }
 
@@ -52,7 +52,7 @@
   border: 1px solid rgba(250,250,242,0.15);
   padding: 7px 14px;
   transition: border-color 0.3s ease, color 0.3s ease;
-  cursor: pointer;
+  cursor: default;
 }
 .backTop:hover { border-color: var(--lime); color: var(--lime); }
 
