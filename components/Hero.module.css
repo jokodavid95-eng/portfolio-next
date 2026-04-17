@@ -1,0 +1,120 @@
+.hero {
+  min-height: 100vh;
+  padding-top: 72px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.heroTop {
+  border-bottom: 1px solid var(--border-lt);
+  padding: 60px 0 48px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 48px;
+  align-items: end;
+}
+
+.headline {
+  font-size: clamp(52px, 7.5vw, 120px);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.lineAccent { color: var(--olive); }
+
+.heroMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 8px;
+}
+
+.descriptor {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--ink-muted);
+  max-width: 340px;
+}
+.descriptor strong { font-weight: 500; color: var(--ink); }
+
+/* Stats */
+.statsBar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+}
+.stat {
+  padding: 24px 0;
+  border-right: 1px solid var(--border-lt);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat:last-child { border-right: none; }
+
+.statVal {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1;
+}
+.statDesc {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+/* Ticker */
+.ticker {
+  overflow: hidden;
+  border-top: 1px solid var(--border-lt);
+  padding: 14px 0;
+  background: var(--surface);
+}
+.tickerTrack {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+.tickerItem {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.tickerItem::after {
+  content: '·';
+  color: var(--olive);
+  font-size: 16px;
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 1024px) {
+  .heroGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .heroGrid    { grid-template-columns: 1fr; gap: 32px; }
+  .statsBar    { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(2) { border-right: none; }
+  .stat:nth-child(3) { border-top: 1px solid var(--border-lt); }
+}

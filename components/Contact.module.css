@@ -1,0 +1,174 @@
+.contact {
+  background: var(--olive);
+  color: var(--cream);
+  border-bottom: 1px solid var(--ink);
+}
+
+.tagDark { color: var(--lime) !important; border-color: rgba(200,204,122,0.5) !important; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Left */
+.left {
+  padding: 80px 64px 80px 0;
+  border-right: 1px solid rgba(250,250,242,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.headline {
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--cream);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.accent { color: var(--lime); }
+
+.sub {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(250,250,242,0.6);
+  max-width: 380px;
+}
+
+/* Info list */
+.infoList { display: flex; flex-direction: column; }
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(250,250,242,0.1);
+}
+.infoRow:first-child { border-top: 1px solid rgba(250,250,242,0.1); }
+.infoIcon {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(250,250,242,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--lime);
+  font-style: normal;
+  font-size: 14px;
+}
+.infoLabel {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(250,250,242,0.4);
+  display: block;
+  margin-bottom: 2px;
+}
+.infoVal { font-size: 13px; font-weight: 400; color: var(--cream); }
+
+/* Socials */
+.socials { display: flex; }
+.social {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(250,250,242,0.2);
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(250,250,242,0.5);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.socials .social:last-child { border-right: 1px solid rgba(250,250,242,0.2); }
+.social:hover { background: var(--lime); color: var(--olive); }
+
+/* Form */
+.right { padding: 80px 0 80px 64px; }
+
+.form { display: flex; flex-direction: column; gap: 20px; }
+
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.formGroup { display: flex; flex-direction: column; gap: 6px; }
+
+.label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(250,250,242,0.45);
+}
+
+.input,
+.textarea {
+  background: rgba(250,250,242,0.05);
+  border: 1px solid rgba(250,250,242,0.15);
+  color: var(--cream);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 300;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  resize: none;
+  width: 100%;
+}
+.input:focus,
+.textarea:focus { border-color: var(--lime); background: rgba(200,204,122,0.05); }
+.input::placeholder,
+.textarea::placeholder { color: rgba(250,250,242,0.25); }
+.inputError { border-color: #e05c5c !important; }
+
+.errMsg {
+  font-size: 11px;
+  color: #f4a0a0;
+  letter-spacing: 0.03em;
+}
+
+.successMsg {
+  font-size: 13px;
+  color: var(--lime);
+  border-top: 1px solid rgba(200,204,122,0.3);
+  padding: 14px 0 0;
+  letter-spacing: 0.03em;
+}
+
+.submitBtn {
+  align-self: flex-start;
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--olive);
+  background: var(--lime);
+  border: 1px solid var(--lime);
+  padding: 14px 28px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.submitBtn:hover:not(:disabled) { background: transparent; color: var(--lime); }
+.submitBtn:disabled { opacity: 0.6; }
+
+@media (max-width: 1024px) {
+  .layout { grid-template-columns: 1fr; }
+  .left   { border-right: none; border-bottom: 1px solid rgba(250,250,242,0.15); padding: 60px 0; }
+  .right  { padding: 60px 0; }
+}
+@media (max-width: 768px) {
+  .formRow { grid-template-columns: 1fr; }
+}
