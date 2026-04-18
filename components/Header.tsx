@@ -67,9 +67,7 @@ export default function Header() {
       >
         <div className="container">
           <div className={styles.inner}>
-            <Link href="#hero" className={styles.logo} onClick={closeDrawer}>
-              David Mateos
-            </Link>
+            <div />
 
             <nav aria-label="Navegación principal">
               <ul className={styles.nav}>

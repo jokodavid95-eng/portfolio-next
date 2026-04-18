@@ -35,7 +35,7 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 14px;
   list-style: none;
 }
 
